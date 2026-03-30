@@ -1,156 +1,138 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="zh-TW">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
-    span.s1 {font-kerning: none}
-    span.s2 {font: 12.0px 'PingFang TC'; font-kerning: none}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>目的地與周邊停車場導覽</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* Custom scrollbar for sidebar */
+        .sidebar-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .sidebar-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        .sidebar-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 10px;
+        }
+        .sidebar-scroll::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+    </style>
 </head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="zh-TW"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;</span><span class="s2">目的地與周邊停車場導覽</span><span class="s1">&lt;/title&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- Tailwind CSS for styling --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* Custom scrollbar for sidebar */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.sidebar-scroll::-webkit-scrollbar {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 6px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.sidebar-scroll::-webkit-scrollbar-track {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: #f1f1f1;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.sidebar-scroll::-webkit-scrollbar-thumb {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: #cbd5e1;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.sidebar-scroll::-webkit-scrollbar-thumb:hover {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: #94a3b8;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body class="bg-gray-100 h-screen overflow-hidden text-gray-800 font-sans"&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="flex flex-col md:flex-row h-full"&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Sidebar --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="w-full md:w-1/3 lg:w-1/4 bg-white shadow-xl z-10 flex flex-col h-1/2 md:h-full order-2 md:order-1 relative"&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- Header --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="p-6 bg-gradient-to-r from-blue-600 to-indigo-700 text-white shrink-0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h1 class="text-xl md:text-2xl font-bold flex items-center gap-2"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"&gt;&lt;/path&gt;&lt;/svg&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s2">周邊停車導覽</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p class="text-blue-100 mt-2 text-sm opacity-90"&gt;</span><span class="s2">點擊按鈕可直接開啟</span><span class="s1"> Google Maps </span><span class="s2">導航。</span><span class="s1">&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- List Container --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="flex-1 overflow-y-auto sidebar-scroll p-4 bg-gray-50"&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- Destination Section --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="mb-6"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h2 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 px-1 border-b pb-1"&gt;</span><span class="s2">目的地</span><span class="s1">&lt;/h2&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="group bg-white rounded-xl p-4 shadow-sm border border-red-100 mb-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-start gap-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div class="bg-red-100 text-red-600 rounded-full p-2 mt-1"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"&gt;&lt;/path&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"&gt;&lt;/path&gt;&lt;/svg&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div class="flex-1"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;h3 class="font-bold text-gray-800 text-lg"&gt;</span><span class="s2">福氣家芳香好眠</span><span class="s1">spa</span><span class="s2">按摩館</span><span class="s1">&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;p class="text-xs text-gray-500 mt-1 mb-3"&gt;</span><span class="s2">新竹市東區光復路二段</span><span class="s1">295</span><span class="s2">號</span><span class="s1">12</span><span class="s2">樓之</span><span class="s1">3&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;a href="https://www.google.com/maps/search/?api=1&amp;query=</span><span class="s2">新竹市東區光復路二段</span><span class="s1">295</span><span class="s2">號</span><span class="s1">12</span><span class="s2">樓之</span><span class="s1">3" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm bg-red-50 text-red-600 px-3 py-1.5 rounded-lg hover:bg-red-600 hover:text-white transition-colors border border-red-100 font-medium"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"&gt;&lt;/path&gt;&lt;/svg&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s2">開啟導航</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- Parking Section --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h2 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 px-1 border-b pb-1"&gt;</span><span class="s2">附近停車場（無特約）</span><span class="s1">&lt;/h2&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div id="parking-list" class="space-y-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;!-- Parking items injected via JS --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Static Map Screenshot Container --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="w-full md:w-2/3 lg:w-3/4 h-1/2 md:h-full order-1 md:order-2 bg-gray-200 flex items-center justify-center overflow-hidden"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- </span><span class="s2">請將下方</span><span class="s1"> src </span><span class="s2">的網址替換為您的截圖檔案路徑，例如</span><span class="s1"> src="my-map-screenshot.png" --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;img src=“parking.png”<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                 </span>alt="</span><span class="s2">地圖截圖</span><span class="s1">"<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                 </span>class="w-full h-full object-cover"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// --- Parking Data ---</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const parkingLocations = [</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>id: 'p1',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>title: '</span><span class="s2">帝國經貿大樓停車場</span><span class="s1">',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>link: 'https://maps.app.goo.gl/fWFgVrkwk8xfNUyG6',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>desc: '</span><span class="s2">距離目的地最近的停車選擇</span><span class="s1">'</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>id: 'p2',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>title: '</span><span class="s2">嘟嘟房停車場</span><span class="s1"> (</span><span class="s2">光復站</span><span class="s1">)',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>link: 'https://maps.app.goo.gl/bQa1weHk8nT54wW87',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>desc: '</span><span class="s2">連鎖停車場，車位多</span><span class="s1">'</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>id: 'p3',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>title: '</span><span class="s2">園道五地下停車場</span><span class="s1">',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>link: 'https://maps.app.goo.gl/oQs5ngPZ6yWSxWgD8',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>desc: '</span><span class="s2">公有地下停車場，空間寬敞</span><span class="s1">'</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>];</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// --- Build UI ---</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const parkingListContainer = document.getElementById('parking-list');</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>parkingLocations.forEach(loc =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const parkingCard = `</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="flex items-start gap-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="bg-blue-50 text-blue-600 rounded-full w-8 h-8 flex items-center justify-center shrink-0 mt-1 font-bold border border-blue-100"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>P</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="flex-1"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;h3 class="font-bold text-gray-800"&gt;${loc.title}&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-xs text-gray-500 mt-1 mb-3"&gt;${loc.desc}&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;a href="${loc.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm bg-blue-50 text-blue-700 px-3 py-1.5 rounded-lg hover:bg-blue-600 hover:text-white transition-colors border border-blue-100 font-medium"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"&gt;&lt;/path&gt;&lt;/svg&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s2">開啟導航</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>`;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>parkingListContainer.insertAdjacentHTML('beforeend', parkingCard);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+<body class="bg-gray-100 h-screen overflow-hidden text-gray-800 font-sans">
+
+    <div class="flex flex-col md:flex-row h-full">
+        
+        <!-- Sidebar -->
+        <div class="w-full md:w-1/3 lg:w-1/4 bg-white shadow-xl z-10 flex flex-col h-1/2 md:h-full order-2 md:order-1 relative">
+            
+            <!-- Header -->
+            <div class="p-6 bg-gradient-to-r from-blue-600 to-indigo-700 text-white shrink-0">
+                <h1 class="text-xl md:text-2xl font-bold flex items-center gap-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+                    周邊停車導覽
+                </h1>
+                <p class="text-blue-100 mt-2 text-sm opacity-90">點擊按鈕可直接開啟 Google Maps 導航。</p>
+            </div>
+
+            <!-- List Container -->
+            <div class="flex-1 overflow-y-auto sidebar-scroll p-4 bg-gray-50">
+                
+                <!-- Destination Section -->
+                <div class="mb-6">
+                    <h2 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 px-1 border-b pb-1">目的地</h2>
+                    
+                    <div class="group bg-white rounded-xl p-4 shadow-sm border border-red-100 mb-3">
+                        <div class="flex items-start gap-3">
+                            <div class="bg-red-100 text-red-600 rounded-full p-2 mt-1">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-gray-800 text-lg">福氣家芳香好眠spa按摩館</h3>
+                                <p class="text-xs text-gray-500 mt-1 mb-3">新竹市東區光復路二段295號12樓之3</p>
+                                <a href="https://www.google.com/maps/search/?api=1&query=新竹市東區光復路二段295號12樓之3" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm bg-red-50 text-red-600 px-3 py-1.5 rounded-lg hover:bg-red-600 hover:text-white transition-colors border border-red-100 font-medium">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                    開啟導航
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parking Section -->
+                <div>
+                    <h2 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 px-1 border-b pb-1">附近停車場（無特約）</h2>
+                    
+                    <div id="parking-list" class="space-y-3">
+                        <!-- Parking items injected via JS -->
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Static Map Screenshot Container -->
+        <div class="w-full md:w-2/3 lg:w-3/4 h-1/2 md:h-full order-1 md:order-2 bg-gray-200 flex items-center justify-center overflow-hidden">
+            <!-- 請將下方 src 的網址替換為您的截圖檔案路徑，例如 src="my-map-screenshot.png" -->
+            <img src="parking.png" 
+                 alt="地圖截圖" 
+                 class="w-full h-full object-cover">
+        </div>
+        
+    </div>
+    
+    <script>
+        // --- Parking Data ---
+        const parkingLocations = [
+            {
+                id: 'p1',
+                title: '帝國經貿大樓停車場',
+                link: 'https://maps.app.goo.gl/fWFgVrkwk8xfNUyG6',
+                desc: '距離目的地最近的停車選擇'
+            },
+            {
+                id: 'p2',
+                title: '嘟嘟房停車場 (光復站)',
+                link: 'https://maps.app.goo.gl/bQa1weHk8nT54wW87',
+                desc: '連鎖停車場，車位多'
+            },
+            {
+                id: 'p3',
+                title: '園道五地下停車場',
+                link: 'https://maps.app.goo.gl/oQs5ngPZ6yWSxWgD8',
+                desc: '公有地下停車場，空間寬敞'
+            }
+        ];
+
+        // --- Build UI ---
+        const parkingListContainer = document.getElementById('parking-list');
+
+        parkingLocations.forEach(loc => {
+            const parkingCard = `
+                <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+                    <div class="flex items-start gap-3">
+                        <div class="bg-blue-50 text-blue-600 rounded-full w-8 h-8 flex items-center justify-center shrink-0 mt-1 font-bold border border-blue-100">
+                            P
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-gray-800">${loc.title}</h3>
+                            <p class="text-xs text-gray-500 mt-1 mb-3">${loc.desc}</p>
+                            <a href="${loc.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm bg-blue-50 text-blue-700 px-3 py-1.5 rounded-lg hover:bg-blue-600 hover:text-white transition-colors border border-blue-100 font-medium">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                開啟導航
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            parkingListContainer.insertAdjacentHTML('beforeend', parkingCard);
+        });
+    </script>
 </body>
 </html>
